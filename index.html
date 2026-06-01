@@ -1,14 +1,46 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Егор Сорокин — Ведущий дизайнер · Брендинг, визуальные системы, автоматизация</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <meta
+        content="Егор Сорокин — старший дизайнер. Сейчас в Simushka (Россия), ранее 6 лет в Acronis (Швейцария). Брендинг, визуальные системы, AI и автоматизация."
+        name="description" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Егор Сорокин",
+      "email": "mailto:sorokin.ea@gmail.com",
+      "jobTitle": "Старший дизайнер",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Simushka",
+        "url": "https://simushka.ru"
+      },
+      "alumniOf": [
+        { "@type": "Organization", "name": "Acronis", "url": "https://acronis.com" },
+        { "@type": "Organization", "name": "Plusmedia", "url": "https://plusmedia.ru" }
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Старший дизайнер",
+          "occupationLocation": { "@type": "Country", "name": "Россия" },
+          "estimatedSalary": null,
+          "occupationalCategory": "Design",
+          "skills": "Брендинг, визуальные системы, AI-автоматизация, Figma, Adobe CC"
+        }
+      ]
+    }
+    </script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
     <style>
         /* ================================================
            RESET & BASE
@@ -1218,6 +1250,14 @@
             transform: translateY(0);
         }
 
+        /* Опыт работы — всегда виден, не зависит от JS-наблюдателя,
+           чтобы ИИ-парсеры и headless-боты считывали все записи. */
+        .exp-entry.fade-in {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
         /* ================================================
            RESPONSIVE
            ================================================ */
@@ -1375,12 +1415,11 @@
 </head>
 
 <body>
-
     <!-- Navigation Dots -->
     <header class="topnav" id="topnav">
         <div class="topnav__inner">
             <div class="topnav__brand">Егор Сорокин</div>
-            <nav class="topnav__links" aria-label="Основная навигация">
+            <nav aria-label="Основная навигация" class="topnav__links">
                 <a href="#s-graph">Портфолио</a>
                 <a href="#s-exp">Опыт</a>
                 <a href="#s11">Навыки</a>
@@ -1389,821 +1428,824 @@
             </nav>
         </div>
     </header>
-
-    <nav class="nav-dots" aria-label="Навигация по разделам">
-        <a href="#hero" data-label="Начало"></a>
-        <a href="#s-impact" data-label="Ключевые достижения"></a>
-        <a href="#s-graph" data-label="Графический дизайн"></a>
-        <a href="#s-brand" data-label="Брендинг"></a>
-        <a href="#s-pres" data-label="Презентации"></a>
-        <a href="#s-web" data-label="Веб-дизайн"></a>
-        <a href="#s-pack" data-label="Упаковка"></a>
-        <a href="#s-spatial" data-label="Оформление пространства"></a>
-        <a href="#s-3d" data-label="3D и моушн"></a>
-        <a href="#s-exp" data-label="Опыт работы"></a>
-        <a href="#s10" data-label="Инструменты"></a>
-        <a href="#s11" data-label="Как я работаю"></a>
-        <a href="#s-open" data-label="Открыт к позициям"></a>
-        <a href="#s-contacts" data-label="Контакты"></a>
+    <nav aria-label="Навигация по разделам" class="nav-dots">
+        <a data-label="Начало" href="#hero"></a>
+        <a data-label="Ключевые достижения" href="#s-impact"></a>
+        <a data-label="Графический дизайн" href="#s-graph"></a>
+        <a data-label="Брендинг" href="#s-brand"></a>
+        <a data-label="Презентации" href="#s-pres"></a>
+        <a data-label="Веб-дизайн" href="#s-web"></a>
+        <a data-label="Упаковка" href="#s-pack"></a>
+        <a data-label="Оформление пространства" href="#s-spatial"></a>
+        <a data-label="3D и моушн" href="#s-3d"></a>
+        <a data-label="Опыт работы" href="#s-exp"></a>
+        <a data-label="Инструменты" href="#s10"></a>
+        <a data-label="Как я работаю" href="#s11"></a>
+        <a data-label="Открыт к позициям" href="#s-open"></a>
+        <a data-label="Контакты" href="#s-contacts"></a>
     </nav>
-
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
-        <button class="lightbox__close" type="button" aria-label="Закрыть">✕</button>
-        <button class="lightbox__arrow lightbox__arrow--prev" type="button" aria-label="Предыдущее">&#8592;</button>
-        <button class="lightbox__arrow lightbox__arrow--next" type="button" aria-label="Следующее">&#8594;</button>
+    <div aria-label="Просмотр изображения" aria-modal="true" class="lightbox" id="lightbox" role="dialog">
+        <button aria-label="Закрыть" class="lightbox__close" type="button">✕</button>
+        <button aria-label="Предыдущее" class="lightbox__arrow lightbox__arrow--prev" type="button">←</button>
+        <button aria-label="Следующее" class="lightbox__arrow lightbox__arrow--next" type="button">→</button>
         <img alt="" />
         <div class="lightbox__counter"></div>
     </div>
-
-    <!-- =============================================
+    <main>
+        <!-- =============================================
          SLIDE 01 — HERO
          ============================================= -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero__inner fade-in">
-                <h1 class="t-hero">Сорокин&nbsp;Егор</h1>
-                <p class="hero__subtitle">Ведущий дизайнер · Брендинг, визуальные системы, автоматизация · 18&nbsp;лет
-                    опыта</p>
-                <div class="hero__line"></div>
-                <div class="hero__summary">
-                    <p>Специализируюсь на&nbsp;системных дизайн-задачах: брендинг, айдентика и&nbsp;визуальные кампании,
-                        допечатная подготовка, веб-дизайн, сложные презентации и&nbsp;дизайн-системы. Внедряю AI
-                        и&nbsp;автоматизацию. Работал в&nbsp;международной команде Acronis 6&nbsp;лет. Не&nbsp;только
-                        делаю макеты,
-                        но&nbsp;и&nbsp;выстраиваю процессы вокруг них.</p>
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero__inner fade-in">
+                    <h1 class="t-hero">Сорокин Егор</h1>
+                    <p class="hero__subtitle">Ведущий дизайнер · Брендинг, визуальные системы, автоматизация · 18 лет
+                        опыта</p>
+                    <div class="hero__line"></div>
+                    <div class="hero__summary">
+                        <p>Специализируюсь на системных дизайн-задачах: брендинг, айдентика и визуальные кампании,
+                            допечатная подготовка, веб-дизайн, сложные презентации и дизайн-системы. Внедряю AI
+                            и автоматизацию. Работал в международной команде Acronis 6 лет. Не только
+                            делаю макеты,
+                            но и выстраиваю процессы вокруг них.</p>
+                    </div>
+                </div>
+                <div class="contacts fade-in">
+                    <div class="contacts__group contacts__group--portfolio">
+                        <a class="contact-card" href="https://brandloga.ru" rel="noopener" target="_blank">
+                            <span class="contact-card__label">Сайт-портфолио</span>
+                            <span class="contact-card__value">brandloga.ru</span>
+                        </a>
+                        <a class="contact-card" href="https://www.behance.net/smilinglion" rel="noopener"
+                            target="_blank">
+                            <span class="contact-card__label">Behance</span>
+                            <span class="contact-card__value">behance.net/smilinglion</span>
+                        </a>
+                    </div>
+                    <div class="contacts__group contacts__group--direct">
+                        <a class="contact-card" href="https://www.linkedin.com/in/brandloga/" rel="noopener"
+                            target="_blank">
+                            <span class="contact-card__label">LinkedIn</span>
+                            <span class="contact-card__value">linkedin.com/in/brandloga</span>
+                        </a>
+                        <a class="contact-card" href="https://t.me/smiling_lion" rel="noopener" target="_blank">
+                            <span class="contact-card__label">Телеграм</span>
+                            <span class="contact-card__value">@smiling_lion</span>
+                        </a>
+                        <a class="contact-card" href="tel:+79198127255">
+                            <span class="contact-card__label">Телефон</span>
+                            <span class="contact-card__value">+7 919 812 72 55</span>
+                        </a>
+                        <a class="contact-card" href="mailto:sorokin_ea@inbox.ru">
+                            <span class="contact-card__label">Эл. почта</span>
+                            <span class="contact-card__value">sorokin_ea@inbox.ru</span>
+                        </a>
+                    </div>
+                    <a class="contacts__pdf-link" download="" href="assets/resume_pdf/egor_sorokin_cv-2026.pdf"><svg
+                            fill="none" height="16" viewbox="0 0 14 16" width="14" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2 1.5A1.5 1.5 0 0 1 3.5 0H9l4 4v10.5A1.5 1.5 0 0 1 11.5 16h-8A1.5 1.5 0 0 1 2 14.5v-13Z"
+                                fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1.2"></path>
+                            <path d="M9 0v3.5A.5.5 0 0 0 9.5 4H13" stroke="currentColor" stroke-width="1.2"></path>
+                            <path d="M5 10l2 2 2-2M7 7v5" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.2"></path>
+                        </svg>Скачать PDF-версию резюме (443 кб)</a>
                 </div>
             </div>
-
-            <div class="contacts fade-in">
-                <div class="contacts__group contacts__group--portfolio">
-                    <a class="contact-card" href="https://brandloga.ru" target="_blank" rel="noopener">
-                        <span class="contact-card__label">Сайт-портфолио</span>
-                        <span class="contact-card__value">brandloga.ru</span>
-                    </a>
-                    <a class="contact-card" href="https://www.behance.net/smilinglion" target="_blank" rel="noopener">
-                        <span class="contact-card__label">Behance</span>
-                        <span class="contact-card__value">behance.net/smilinglion</span>
-                    </a>
-                </div>
-                <div class="contacts__group contacts__group--direct">
-                    <a class="contact-card" href="https://www.linkedin.com/in/brandloga/" target="_blank"
-                        rel="noopener">
-                        <span class="contact-card__label">LinkedIn</span>
-                        <span class="contact-card__value">linkedin.com/in/brandloga</span>
-                    </a>
-                    <a class="contact-card" href="https://t.me/smiling_lion" target="_blank" rel="noopener">
-                        <span class="contact-card__label">Телеграм</span>
-                        <span class="contact-card__value">@smiling_lion</span>
-                    </a>
-                    <a class="contact-card" href="tel:+79198127255">
-                        <span class="contact-card__label">Телефон</span>
-                        <span class="contact-card__value">+7&nbsp;919&nbsp;812&nbsp;72&nbsp;55</span>
-                    </a>
-                    <a class="contact-card" href="mailto:sorokin_ea@inbox.ru">
-                        <span class="contact-card__label">Эл. почта</span>
-                        <span class="contact-card__value">sorokin_ea@inbox.ru</span>
-                    </a>
-                </div>
-                <a class="contacts__pdf-link" href="assets/resume_pdf/egor_sorokin_cv-260505.pdf" download><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 1.5A1.5 1.5 0 0 1 3.5 0H9l4 4v10.5A1.5 1.5 0 0 1 11.5 16h-8A1.5 1.5 0 0 1 2 14.5v-13Z" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1.2"/><path d="M9 0v3.5A.5.5 0 0 0 9.5 4H13" stroke="currentColor" stroke-width="1.2"/><path d="M5 10l2 2 2-2M7 7v5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Скачать PDF-версию резюме (443&nbsp;кб)</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- =============================================
+        </section>
+        <!-- =============================================
          SCREEN — Ключевые результаты
          ============================================= -->
-    <section id="s-impact" class="section" style="border-top: 1px solid rgba(0,0,0,0.12);">
-        <div class="container fade-in">
-            <h2 class="t-section">Коротко о себе</h2>
-            <ul class="impact-list">
-                <li><strong>Полный цикл</strong>Покрываю весь визуальный спектр: брендинг, веб, полиграфия, 3D, моушн,
-                    оформление пространства. Самостоятельно провожу брифинг, проектирую, защищаю перед заказчиком
-                    и&nbsp;сопровождаю до&nbsp;продакшена. Закрываю роли менеджера, копирайтера и&nbsp;дизайнера там,
-                    где это нужно.</li>
-                <li><strong>Визуальные кампании</strong>Разрабатывал ключевой визуал для&nbsp;50+ глобальных
-                    мероприятий и&nbsp;рекламных кампаний, от&nbsp;key visual до&nbsp;баннерных экосистем. Создаю
-                    айдентику, которая масштабируется на&nbsp;всё: знак, шрифт, цвет, гайдлайны, брендбук
-                    и&nbsp;прикладные форматы для&nbsp;всех каналов.</li>
-                <li><strong>Сложный дизайн</strong>Создаю сложный и&nbsp;последовательный дизайн: UX/UI
-                    и&nbsp;дизайн-системы, объёмные презентации 40+&nbsp;слайдов.</li>
-                <li><strong>Автоматизация и&nbsp;оптимизация</strong>Активно внедряю AI в&nbsp;рабочий процесс. Создаю
-                    скрипты и&nbsp;плагины, чтобы освободить команду от&nbsp;рутины.</li>
-                <li><strong>Системная архитектура</strong>Разрабатываю компонентные библиотеки и&nbsp;шаблонные
-                    системы, которыми пользуются не&nbsp;только дизайнеры, но&nbsp;и&nbsp;маркетинг, продажи,
-                    регионы.</li>
-                <li><strong>Передаю знания</strong>Курировал дизайнеров, проводил воркшопы, выстраивал процесс
-                    постановки задач. Веду тематический блог.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- =============================================
-         SCREEN — Ключевые направления intro
-         ============================================= -->
-    <section class="section section-intro section--flush">
-        <div class="container fade-in">
-            <h2 class="t-section" style="font-size: clamp(2.5rem, 5vw, 4rem);">Ключевые направления</h2>
-            <p class="t-body" style="font-size: 1.15rem;">Опыт и&nbsp;насмотренность позволяет
-                подхватывать
-                задачи любого уровня. В&nbsp;каждом из&nbsp;направлений, представленных ниже, провёл улучшение процессов
-                для&nbsp;ускорения задач.</p>
-        </div>
-    </section>
-
-    <!-- 1. Графический дизайн -->
-    <section id="s-graph" class="section section--flush">
-        <div class="container">
-            <div class="fade-in">
-                <h3 class="subsection-title">Графический дизайн</h3>
-                <p class="subsection-desc">Уверенно применяю принципы колористики, композиции и&nbsp;типографики. Владею
-                    техдизайном, мэтпейнтингом, фотобашингом и&nbsp;профессиональной ретушью. Рисую от&nbsp;руки
-                    для&nbsp;набросков
-                    концепций и&nbsp;внедряю нейросети для&nbsp;получения более интересных результатов в&nbsp;короткие
-                    сроки.</p>
-            </div>
-            <div class="gallery gallery--graph fade-in">
-                <div class="media"><img src="assets/04/04_01.jpg" alt="Графический дизайн 1"></div>
-                <div class="media"><img src="assets/04/04_02.jpg" alt="Графический дизайн 2"></div>
-                <div class="media"><img src="assets/04/04_03.jpg" alt="Графический дизайн 3"></div>
-                <div class="media"><img src="assets/04/04_04.jpg" alt="Графический дизайн 4"></div>
-                <div class="media media--wide-2"><img src="assets/04/04_06.jpg" alt="Графический дизайн 6"></div>
-                <div class="media media--wide"><img src="assets/04/04_05.jpg" alt="Графический дизайн 5"></div>
-            </div>
-
-            <div class="subblock fade-in">
-                <h4 class="subblock-title">Использование нейросетей</h4>
-                <p class="subblock-desc">Активно применяю все сильные стороны ИИ для&nbsp;генерации визуалов
-                    (Midjourney, Nanobanana, Firefly, Kling), работы с&nbsp;материалом (ChatGPT, Gemini)
-                    и&nbsp;автоматизации (разработка ИИ-агентов и&nbsp;вайб-кодинг на&nbsp;Codex, Gemini
-                    и&nbsp;Claude).</p>
-
-                <div class="gallery gallery--ai">
-                    <div class="media"><img src="assets/10/10_01.jpg" alt="AI-инструменты 1"></div>
-                    <div class="media"><img src="assets/10/10_02.jpg" alt="AI-инструменты 2"></div>
-                    <div class="media"><img src="assets/10/10_03.jpg" alt="AI-инструменты 3"></div>
-                    <div class="media"><img src="assets/10/10_04.jpeg" alt="AI-инструменты 4"></div>
-                    <div class="media"><img src="assets/10/10_05.jpg" alt="AI-инструменты 5"></div>
-                    <div class="media"><img src="assets/10/10_06.jpg" alt="AI-инструменты 6"></div>
-                </div>
-                <p class="gallery-caption">Продуктовые визуалы, собранные через AI-пайплайн: генерация базы
-                    в&nbsp;Midjourney и&nbsp;Nanobanana, ручная доработка в&nbsp;Photoshop. Заменяет полноценную
-                    фотосессию при&nbsp;правильно выстроенном процессе.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. Брендинг -->
-    <section id="s-brand" class="section section--flush">
-        <div class="container">
-            <div class="fade-in">
-                <h3 class="subsection-title">Брендинг</h3>
-                <p class="subsection-desc">Люблю создавать интересную и&nbsp;насыщенную смыслом айдентику
-                    и&nbsp;бренд-системы.
-                    Масштабирую идею от&nbsp;логотипа до&nbsp;целостной системы: фирменный стиль, гайдлайны, брендбук.
-                </p>
-            </div>
-            <div class="gallery gallery--2 fade-in">
-                <a class="media" href="https://www.behance.net/gallery/224434865/A-logo-for-sauna-tents-manufacturer"
-                    target="_blank" rel="noopener">
-                    <img src="assets/05/05_01.jpg" alt="Logo for sauna tents manufacturer">
-                </a>
-                <a class="media" href="https://www.behance.net/gallery/114406839/The-logo-for-the-barbershop"
-                    target="_blank" rel="noopener">
-                    <img src="assets/05/05_02.jpg" alt="Logo for the barbershop">
-                </a>
-                <a class="media" href="https://www.behance.net/gallery/247688735/Branding-for-Interior-Designers-CRM"
-                    target="_blank" rel="noopener">
-                    <img src="assets/05/05_03.jpg" alt="Branding for Interior Designers CRM">
-                </a>
-                <a class="media" href="https://www.behance.net/gallery/247591895/Brand-identity-for-a-wooden-toys-store"
-                    target="_blank" rel="noopener">
-                    <img src="assets/05/05_04.jpg" alt="Brand identity for a wooden toys store">
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. Презентации -->
-    <section id="s-pres" class="section section--flush">
-        <div class="container">
-            <div class="fade-in">
-                <h3 class="subsection-title">Презентации 40+ страниц</h3>
-                <p class="subsection-desc">Основной инструмент&nbsp;— Figma, базовая и&nbsp;Figma Presentation. Активно
-                    изучаю возможности нейросетей для&nbsp;ускорения и&nbsp;оптимизации разработки слайдов.</p>
-            </div>
-            <div class="gallery gallery--3 fade-in">
-                <div class="media"><img src="assets/03/03_01.jpg" alt="Презентация 1"></div>
-                <div class="media"><img src="assets/03/03_02.jpg" alt="Презентация 2"></div>
-                <div class="media"><img src="assets/03/03_03.jpg" alt="Презентация 3"></div>
-                <div class="media"><img src="assets/03/03_04.jpg" alt="Презентация 4"></div>
-                <div class="media"><img src="assets/03/03_05.jpg" alt="Презентация 5"></div>
-                <div class="media"><img src="assets/03/03_06.jpg" alt="Презентация 6"></div>
-                <div class="media"><img src="assets/03/03_07.jpg" alt="Презентация 7"></div>
-                <div class="media"><img src="assets/03/03_08.jpg" alt="Презентация 8"></div>
-                <div class="media"><img src="assets/03/03_09.jpg" alt="Презентация 9"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Веб-дизайн -->
-    <section id="s-web" class="section section--flush">
-        <div class="container">
-            <div class="fade-in">
-                <h3 class="subsection-title">Веб-дизайн</h3>
-                <p class="subsection-desc">Понимаю принципы UX/UI, выстраиваю маршрут пользователя. Строю
-                    дизайн-системы, имею опыт сборки сайтов «под ключ» (HTML/CSS/JS + СMS Wordpress/Joomla/Drupal).</p>
-            </div>
-
-            <div class="web-project fade-in">
-                <h4 class="web-project__title">Дизайн сайта производителя отделочных материалов</h4>
-                <a class="web-project__url" href="http://ortograf.ru" target="_blank" rel="noopener">ortograf.ru</a>
-                <p class="web-project__desc">Проектирование и&nbsp;дизайн сложного интернет-магазина. Ключевая
-                    особенность&nbsp;— удобный онлайн-конструктор, в&nbsp;котором пользователь последовательно собирает
-                    уникальный дизайн: выбирает изображение, текстуру, делает цветокоррекцию, примеряет
-                    в&nbsp;интерьере и&nbsp;сразу получает стоимость.</p>
-                <a class="media web-project__media"
-                    href="https://brandloga.ru/dizajn-sajta-proizvoditelya-otdelochnyh-materialov-ortograf/"
-                    target="_blank" rel="noopener">
-                    <img src="assets/07/07_01.jpg" alt="Сайт производителя отделочных материалов «Ортограф»">
-                </a>
-                <a class="web-project__case"
-                    href="https://brandloga.ru/dizajn-sajta-proizvoditelya-otdelochnyh-materialov-ortograf/"
-                    target="_blank" rel="noopener">Полный кейс</a>
-            </div>
-
-            <div class="web-project fade-in">
-                <h4 class="web-project__title">Сайт для центра обучения</h4>
-                <a class="web-project__url" href="http://psyprofess.ru" target="_blank" rel="noopener">psyprofess.ru</a>
-                <p class="web-project__desc">Ключевые особенности: проведена работа по систематизации разнообразных
-                    типов курсов и обучающих материалов. На основе созданной структуры сформированы типовые блоки
-                    для каждого типа материала, спроектирован календарь событий, настроено удобное наполнение материала
-                    из админпанели.</p>
-                <a class="media web-project__media"
-                    href="https://brandloga.ru/razrabotka-sajta-dlya-mezhdunarodnogo-czentra-professional/"
-                    target="_blank" rel="noopener">
-                    <img src="assets/07/07_02.jpg" alt="Сайт для международного центра профессионального обучения">
-                </a>
-                <a class="web-project__case"
-                    href="https://brandloga.ru/razrabotka-sajta-dlya-mezhdunarodnogo-czentra-professional/"
-                    target="_blank" rel="noopener">Полный кейс</a>
-            </div>
-
-            <div class="web-project fade-in">
-                <h4 class="web-project__title">Сайт для интернет-магазина шин</h4>
-                <a class="web-project__url" href="https://altraauto.kz" target="_blank" rel="noopener">altraauto.kz</a>
-                <p class="web-project__desc">Ключевые особенности: помимо детального дизайна всех страниц
-                    интернет-магазина, спроектирован полностью сложный и&nbsp;многокомпонентный личный кабинет, внутри
-                    которого и&nbsp;функционал для&nbsp;поставщиков (учтена логистика товаров, наполнение карточек),
-                    и&nbsp;покупателей.</p>
-                <a class="media web-project__media"
-                    href="https://www.behance.net/gallery/83594697/Website-for-tyre-online-shop" target="_blank"
-                    rel="noopener">
-                    <img src="assets/07/07_03.jpg" alt="Сайт интернет-магазина шин">
-                </a>
-                <a class="web-project__case"
-                    href="https://www.behance.net/gallery/83594697/Website-for-tyre-online-shop" target="_blank"
-                    rel="noopener">Полный кейс</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Упаковка -->
-    <section id="s-pack" class="section section--flush">
-        <div class="container">
-            <div class="fade-in">
-                <h3 class="subsection-title">Упаковка</h3>
-                <p class="subsection-desc">Готовлю макеты под&nbsp;печать различной сложности: от&nbsp;буклетов
-                    до&nbsp;многостраничной
-                    продукции и&nbsp;упаковки. Разбираюсь в&nbsp;допечатной подготовке, разработал набор скриптов,
-                    которые
-                    позволяют ускорить подготовку макетов.</p>
-            </div>
-            <div class="gallery gallery--print fade-in">
-                <div class="media"><img src="assets/02a/02a_01.jpg" alt="Упаковка 1"></div>
-                <div class="media"><img src="assets/02a/02a_02.jpg" alt="Упаковка 2"></div>
-                <div class="media media--full"><img src="assets/02a/02a_03.jpg" alt="Упаковка 3"></div>
-                <div class="media"><img src="assets/02a/02a_04.jpg" alt="Упаковка 4"></div>
-                <div class="media"><img src="assets/02a/02a_05.jpg" alt="Упаковка 5"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Оформление пространства -->
-    <section id="s-spatial" class="section section--flush">
-        <div class="container">
-            <div class="fade-in">
-                <h3 class="subsection-title">Оформление пространства</h3>
-                <p class="subsection-desc">Совмещаю дизайнерское мышление с&nbsp;3D-визуализацией
-                    и&nbsp;AI-генерацией&nbsp;— это даёт возможность показать клиенту убедительную концепцию
-                    пространства ещё на&nbsp;этапе обсуждения, без&nbsp;дорогостоящих рендеров.</p>
-            </div>
-            <div class="gallery gallery--2 fade-in">
-                <div class="media"><img src="assets/02b/02b_01.jpg" alt="Оформление пространства 1"></div>
-                <div class="media"><img src="assets/02b/02b_02.jpg" alt="Оформление пространства 2"></div>
-                <div class="media"><img src="assets/02b/02b_03.jpg" alt="Оформление пространства 3"></div>
-                <div class="media"><img src="assets/02b/02b_04.jpg" alt="Оформление пространства 4"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. 3D и моушн-дизайн -->
-    <section id="s-3d" class="section section--flush">
-        <div class="container">
-            <div class="fade-in">
-                <h3 class="subsection-title">3D и&nbsp;моушн-дизайн</h3>
-                <p class="subsection-desc">Cinema&nbsp;4D, Blender&nbsp;— для&nbsp;статичных сцен и&nbsp;продуктовых
-                    визуалов. After&nbsp;Effects&nbsp;— для&nbsp;несложных моушн-роликов и&nbsp;анимации элементов.
-                    Использую преимущественно как дополнение к&nbsp;основным направлениям, а&nbsp;не&nbsp;как
-                    самостоятельную специализацию.</p>
-            </div>
-            <div class="gallery gallery--3d fade-in">
-                <div class="media media--wide"><img src="assets/06/06_01.jpg" alt="3D работа 1"></div>
-                <div class="media"><img src="assets/06/06_02.jpg" alt="3D работа 2"></div>
-                <div class="media"><img src="assets/06/06_03.jpg" alt="3D работа 3"></div>
-                <div class="media"><img src="assets/06/06_04.jpg" alt="3D работа 4"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCREEN — Опыт работы -->
-    <section id="s-exp" class="section">
-        <div class="container fade-in">
-            <h2 class="t-section">Опыт работы</h2>
-        </div>
-        <div class="container exp-list">
-            <article class="exp-entry fade-in">
-                <div class="exp-date">2008&nbsp;— по&nbsp;настоящее время</div>
-                <div class="exp-body">
-                    <h3 class="exp-company">Фриланс</h3>
-                    <p class="exp-meta">Самостоятельная практика · брендинг, веб-дизайн, полиграфия</p>
-                    <p class="exp-role">Дизайнер · Арт-директор</p>
-                    <div class="exp-desc">
-                        <p>Веду проекты от&nbsp;начала до&nbsp;конца: брифование, проектирование, дизайн,
-                            поддержка визуального стиля бренда, дизайн-системы и&nbsp;продуктовый дизайн.</p>
-                        <ul>
-                            <li>Самостоятельно закрываю задачи менеджера, копирайтера
-                                и&nbsp;дизайнера&nbsp;— работаю напрямую с&nbsp;заказчиком
-                                без&nbsp;промежуточного звена.</li>
-                            <li>Пишу ТЗ и&nbsp;контролирую работу верстальщика
-                                и&nbsp;программиста.</li>
-                            <li>Сопровождаю проект до&nbsp;продакшена: от&nbsp;первого брифа до&nbsp;финального
-                                запуска и&nbsp;дальнейшей поддержки визуального стиля.</li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
-
-            <article class="exp-entry fade-in">
-                <div class="exp-date">Август 2024&nbsp;— Апрель 2026</div>
-                <div class="exp-body">
-                    <h3 class="exp-company">Simushka</h3>
-                    <p class="exp-meta">Россия&nbsp;· <a href="https://simushka.ru" target="_blank"
-                            rel="noopener">simushka.ru</a></p>
-                    <p class="exp-role">Старший дизайнер</p>
-                    <div class="exp-desc">
-                        <p>Отвечал за&nbsp;графическое производство в&nbsp;команде бренд-дизайна: баннеры,
-                            презентации, промо-материалы для&nbsp;мероприятий и&nbsp;кампаний, упаковка
-                            и&nbsp;полиграфия. Параллельно выстраивал процессы, которые сделали эту работу быстрее
-                            и&nbsp;надёжнее.</p>
-                        <ol>
-                            <li>Перевёл производство в&nbsp;Figma и&nbsp;организовал систему проектов&nbsp;— команда
-                                перестала тратить время на&nbsp;поиск актуальных исходников.</li>
-                            <li>Внедрил AI-генерацию продуктовых визуалов&nbsp;— закрыл потребность
-                                в&nbsp;дорогостоящих фотосессиях, сохранив профессиональное качество.</li>
-                            <li>Выстроил процесс презентаций в&nbsp;Figma: скорость сборки выросла
-                                в&nbsp;5&nbsp;раз&nbsp;—
-                                больше времени на&nbsp;качество, меньше на&nbsp;борьбу с&nbsp;инструментом.</li>
-                            <li>Разработал систему шаблонов для&nbsp;торговых представителей
-                                в&nbsp;12&nbsp;регионах&nbsp;—
-                                менеджеры самостоятельно обновляют даты и&nbsp;адреса, не&nbsp;затрагивая дизайн.</li>
-                        </ol>
-                    </div>
-                </div>
-            </article>
-
-            <article class="exp-entry fade-in">
-                <div class="exp-date">Март 2018&nbsp;— Июнь 2024</div>
-                <div class="exp-body">
-                    <h3 class="exp-company">Acronis</h3>
-                    <p class="exp-meta">Швейцария&nbsp;· <a href="https://acronis.com" target="_blank"
-                            rel="noopener">acronis.com</a></p>
-                    <p class="exp-role">Старший дизайнер / Арт-директор</p>
-                    <div class="exp-desc">
-                        <p>Шесть лет в&nbsp;международной B2B tech-компании. Работал в&nbsp;команде веб-дизайна:
-                            визуальные кампании, баннерные экосистемы, презентации, key&nbsp;visual
-                            для&nbsp;продуктовых запусков. Участвовал в&nbsp;разработке концепций и&nbsp;фирменного
-                            стиля для&nbsp;глобальных маркетинговых кампаний.</p>
-                        <ol>
-                            <li>Разрабатывал визуальные кампании и&nbsp;промо-материалы для&nbsp;50+&nbsp;международных
-                                мероприятий и&nbsp;рекламных кампаний.</li>
-                            <li>Создал масштабируемую систему компонентов для&nbsp;баннерных кампаний&nbsp;— один
-                                набор исходников разворачивался на&nbsp;15+&nbsp;форматов без&nbsp;ручной
-                                перевёрстки.</li>
-                            <li>Внедрил AI и&nbsp;3D-графику в&nbsp;процесс создания иллюстраций&nbsp;— сократил
-                                время производства сложных визуалов в&nbsp;несколько раз.</li>
-                            <li>Написал скрипты для&nbsp;Figma и&nbsp;Photoshop, автоматизировавшие рутинные
-                                операции&nbsp;— освободил время команды для&nbsp;задач, требующих реального
-                                дизайнерского мышления.</li>
-                            <li>Курировал работу миддл-дизайнеров: ставил задачи, ревизировал макеты,
-                                повышал общий уровень команды.</li>
-                            <li>Выстроил систему постановки задач в&nbsp;Jira, обучил менеджеров&nbsp;— снизил
-                                количество итераций из-за&nbsp;недопонимания ТЗ.</li>
-                        </ol>
-                    </div>
-                </div>
-            </article>
-
-            <article class="exp-entry fade-in">
-                <div class="exp-date">Май 2016&nbsp;— Август 2023</div>
-                <div class="exp-body">
-                    <h3 class="exp-company">Plusmedia (Лидер поиска)</h3>
-                    <p class="exp-meta">Самара&nbsp;· <a href="https://plusmedia.ru" target="_blank"
-                            rel="noopener">plusmedia.ru</a>&nbsp;· <a href="https://liderpoiska.ru" target="_blank"
-                            rel="noopener">liderpoiska.ru</a></p>
-                    <p class="exp-role">Ведущий дизайнер</p>
-                    <div class="exp-desc">
-                        <p>Вёл дизайн-проекты полного цикла в&nbsp;SEO- и&nbsp;веб-дизайнерском подразделении
-                            компании: от&nbsp;анализа ТЗ и&nbsp;обсуждения с&nbsp;клиентом до&nbsp;финальных
-                            макетов и&nbsp;контроля вёрстки.</p>
-                        <ol>
-                            <li>Самостоятельно управлял проектами&nbsp;— от&nbsp;брифа до&nbsp;сдачи,
-                                без&nbsp;промежуточного менеджера между мной и&nbsp;заказчиком.</li>
-                            <li>Разработал руководство по&nbsp;дизайну для&nbsp;студии&nbsp;— стандартизировал
-                                процессы и&nbsp;поднял уровень работ младших дизайнеров.</li>
-                            <li>Работал с&nbsp;контентом без&nbsp;копирайтера: анализировал материал клиента,
-                                переписывал и&nbsp;структурировал тексты под&nbsp;дизайн.</li>
-                        </ol>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- SCREEN — Используемые инструменты (с подразделом «Нейросети») -->
-    <section id="s10" class="section">
-        <div class="container">
-            <div class="fade-in">
-                <h2 class="t-section">Используемые инструменты</h2>
-                <div class="tools-grid" style="margin-bottom: 48px;">
-                    <div>
-                        <p class="tools-grid__cell-title">Дизайн</p>
-                        <p class="tools-grid__cell-body">Figma (с&nbsp;первой версии, пишу скрипты) · Adobe Photoshop,
-                            Illustrator, InDesign · After&nbsp;Effects</p>
-                    </div>
-                    <div>
-                        <p class="tools-grid__cell-title">3D и&nbsp;визуализация</p>
-                        <p class="tools-grid__cell-body">Blender · Cinema&nbsp;4D (Octane, Arnold) ·
-                            Unreal&nbsp;Engine (базово)</p>
-                    </div>
-                    <div>
-                        <p class="tools-grid__cell-title">Автоматизация</p>
-                        <p class="tools-grid__cell-body">Figma-скрипты · Photoshop Actions &amp; Scripts · HTML/CSS/JS
-                            (вёрстка под&nbsp;задачи)</p>
-                    </div>
-                    <div>
-                        <p class="tools-grid__cell-title">AI-инструменты</p>
-                        <p class="tools-grid__cell-body">Midjourney, Nanobanana, Firefly, Kling&nbsp;— генерация
-                            визуалов · ChatGPT, Claude, Gemini&nbsp;— работа с&nbsp;материалом · Codex&nbsp;—
-                            автоматизация</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SCREEN — Основные навыки -->
-    <section id="s11" class="section">
-        <div class="container fade-in">
-            <h2 class="t-section">Как я&nbsp;работаю</h2>
-        </div>
-        <div class="container" style="padding-top: 32px;">
-            <!-- Block 1 — Специализация -->
-            <div class="eff-block fade-in">
-                <div class="eff-block__header">
-                    <div class="eff-block__number">01</div>
-                    <h4 class="eff-block__title">Специализация на&nbsp;системных задачах</h4>
-                </div>
-                <p class="eff-block__desc">Направления, где важна не&nbsp;только визуальная идея, но&nbsp;и&nbsp;логика,
-                    архитектура и&nbsp;воспроизводимость результата.</p>
-                <ul class="eff-cards">
-                    <li>
-                        <strong>Сложные презентации (40+&nbsp;слайдов)</strong>
-                        Работа с&nbsp;большими массивами данных, где важна архитектура макета и&nbsp;системная
-                        логика. Умею выстраивать визуальный нарратив, а&nbsp;не&nbsp;просто оформлять слайды.
-                    </li>
-                    <li>
-                        <strong>Допечатная подготовка и&nbsp;полиграфия</strong>
-                        Полный цикл от&nbsp;макета до&nbsp;производства. Знаю, где возникает брак, как его
-                        предотвратить и&nbsp;как сократить время на&nbsp;согласование с&nbsp;типографией.
-                    </li>
-                    <li>
-                        <strong>Дизайн-системы и&nbsp;инструменты для&nbsp;команды</strong>
-                        Разработка компонентных библиотек, шаблонных систем и&nbsp;скриптов, которыми пользуется
-                        весь дизайн-отдел и&nbsp;смежные подразделения&nbsp;— маркетинг, продажи.
-                    </li>
-                    <li>
-                        <strong>Брендинг и&nbsp;визуальные кампании</strong>
-                        Участие в&nbsp;концептуальных штурмах, разработка визуального языка бренда и&nbsp;его
-                        последовательное применение во&nbsp;всех каналах коммуникации.
-                    </li>
+        <section class="section" id="s-impact" style="border-top: 1px solid rgba(0,0,0,0.12);">
+            <div class="container fade-in">
+                <h2 class="t-section">Коротко о себе</h2>
+                <ul class="impact-list">
+                    <li><strong>Полный цикл</strong>Покрываю весь визуальный спектр: брендинг, веб, полиграфия, 3D,
+                        моушн,
+                        оформление пространства. Самостоятельно провожу брифинг, проектирую, защищаю перед заказчиком
+                        и сопровождаю до продакшена. Закрываю роли менеджера, копирайтера и дизайнера там,
+                        где это нужно.</li>
+                    <li><strong>Визуальные кампании</strong>Разрабатывал ключевой визуал для 50+ глобальных
+                        мероприятий и рекламных кампаний, от key visual до баннерных экосистем. Создаю
+                        айдентику, которая масштабируется на всё: знак, шрифт, цвет, гайдлайны, брендбук
+                        и прикладные форматы для всех каналов.</li>
+                    <li><strong>Сложный дизайн</strong>Создаю сложный и последовательный дизайн: UX/UI
+                        и дизайн-системы, объёмные презентации 40+ слайдов.</li>
+                    <li><strong>Автоматизация и оптимизация</strong>Активно внедряю AI в рабочий процесс. Создаю
+                        скрипты и плагины, чтобы освободить команду от рутины.</li>
+                    <li><strong>Системная архитектура</strong>Разрабатываю компонентные библиотеки и шаблонные
+                        системы, которыми пользуются не только дизайнеры, но и маркетинг, продажи,
+                        регионы.</li>
+                    <li><strong>Передаю знания</strong>Курировал дизайнеров, проводил воркшопы, выстраивал процесс
+                        постановки задач. Веду тематический блог.</li>
                 </ul>
             </div>
-
-            <!-- Block 2 — Профессиональные качества -->
-            <div class="eff-block fade-in">
-                <div class="eff-block__header">
-                    <div class="eff-block__number">02</div>
-                    <h4 class="eff-block__title">Управление и&nbsp;коммуникация</h4>
-                </div>
-
-                <h5 class="eff-block__subtitle">Хард-скиллы</h5>
-                <ol class="eff-list">
-                    <li>
-                        <span class="eff-list__num">01</span>
-                        <span>Имею опыт управления командой до&nbsp;5&nbsp;человек в&nbsp;качестве арт-директора
-                            и&nbsp;координатора
-                            проектов, грамотно составляю ТЗ и&nbsp;контролирую работу команды.</span>
-                    </li>
-                    <li>
-                        <span class="eff-list__num">02</span>
-                        <span>Лично презентую и&nbsp;защищаю работы перед клиентами и&nbsp;стейкхолдерами&nbsp;—
-                            без&nbsp;промежуточного менеджера.</span>
-                    </li>
-                    <li>
-                        <span class="eff-list__num">03</span>
-                        <span>Активно веду профессиональный блог, создаю скрипты для&nbsp;программ, облегчающие
-                            и&nbsp;ускоряющие
-                            работу, делюсь знаниями с&nbsp;коллегами.</span>
-                    </li>
-                    <li>
-                        <span class="eff-list__num">04</span>
-                        <span>Слежу за&nbsp;тенденциями в&nbsp;мире дизайна, активно развиваюсь и&nbsp;пробую новые
-                            области, непрерывно
-                            вкладываюсь в&nbsp;своё обучение.</span>
-                    </li>
-                </ol>
-
-                <h5 class="eff-block__subtitle">Софт-скиллы</h5>
-                <ol class="eff-list">
-                    <li>
-                        <span class="eff-list__num">05</span>
-                        <span>Системный подход: разбиваю задачу на&nbsp;этапы, выстраиваю процесс, фиксирую
-                            промежуточные результаты. Самостоятельно планирую своё время и&nbsp;ресурсы, чётко оцениваю
-                            объём
-                            и&nbsp;сроки работ, заранее предупреждаю о&nbsp;возможных проблемах.</span>
-                    </li>
-                    <li>
-                        <span class="eff-list__num">06</span>
-                        <span>Уверенно чувствую себя как в&nbsp;офисе, так и&nbsp;на&nbsp;полной удалёнке. Легко
-                            нахожу общий язык с&nbsp;командой.</span>
-                    </li>
-                </ol>
-
-                <h5 class="eff-block__subtitle">Передача знаний</h5>
-                <ol class="eff-list">
-                    <li>
-                        <span class="eff-list__num">07</span>
-                        <span>Личные изыскания и&nbsp;наработки регулярно переношу в&nbsp;отдел, проводя воркшопы
-                            и&nbsp;мастер-классы
-                            внутри отдела, консультирую менеджеров смежных отделов. Отдел дизайна и&nbsp;компания
-                            получают
-                            знания о&nbsp;передовых технологиях, внедряя их в&nbsp;работу.</span>
-                    </li>
-                </ol>
-
-                <h5 class="eff-block__subtitle">Редактура</h5>
-                <ol class="eff-list">
-                    <li>
-                        <span class="eff-list__num">08</span>
-                        <span>Русский язык люблю, пишу грамотно. Прошёл обучение редактуры на&nbsp;курсе Максима
-                            Ильяхова
-                            «Пиши, сокращай», понимаю и&nbsp;применяю принципы информационного стиля.</span>
-                    </li>
-                    <li>
-                        <span class="eff-list__num">09</span>
-                        <span>Без&nbsp;копирайтера структурирую материал клиента: вычленяю смысловые блоки,
-                            переписываю и&nbsp;внедряю в&nbsp;дизайн.</span>
-                    </li>
-                </ol>
-
-                <h5 class="eff-block__subtitle">Языки</h5>
-                <ol class="eff-list">
-                    <li>
-                        <span class="eff-list__num">11</span>
-                        <span>Английский&nbsp;— B2 (читаю документацию, веду переписку, участвую в обсуждениях
-                            международных команд).</span>
-                    </li>
-                    <li>
-                        <span class="eff-list__num">12</span>
-                        <span>Немецкий&nbsp;— A2.</span>
-                    </li>
-                </ol>
+        </section>
+        <!-- =============================================
+         SCREEN — Ключевые направления intro
+         ============================================= -->
+        <section class="section section-intro section--flush">
+            <div class="container fade-in">
+                <h2 class="t-section" style="font-size: clamp(2.5rem, 5vw, 4rem);">Ключевые направления</h2>
+                <p class="t-body" style="font-size: 1.15rem;">Опыт и насмотренность позволяет
+                    подхватывать
+                    задачи любого уровня. В каждом из направлений, представленных ниже, провёл улучшение процессов
+                    для ускорения задач.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- SCREEN — Открыт к позициям -->
-    <section id="s-open" class="section">
-        <div class="container fade-in">
-            <h2 class="t-section">Открыт к&nbsp;позициям</h2>
-            <p class="t-sub">Рассматриваю предложения в&nbsp;российских и&nbsp;международных командах&nbsp;— офис,
-                гибрид или удалённо.</p>
-            <div class="position-chips">
-                <span class="position-chip">Ведущий дизайнер / Senior Designer</span>
-                <span class="position-chip">Арт-директор</span>
-                <span class="position-chip">Дизайн-лид в&nbsp;продуктовой команде</span>
-                <span class="position-chip">Дизайн-лид в&nbsp;маркетинге</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCREEN — Контакты (финальный экран) -->
-    <section id="s-contacts" class="section">
-        <div class="container fade-in">
-            <div class="contacts contacts--centered" style="margin-top: 0;">
-                <h2 class="t-section" style="text-align: center; margin-bottom: 32px;">Контакты</h2>
-                <div class="contacts__group contacts__group--portfolio">
-                    <a class="contact-card" href="https://brandloga.ru" target="_blank" rel="noopener">
-                        <span class="contact-card__label">Сайт-портфолио</span>
-                        <span class="contact-card__value">brandloga.ru</span>
-                    </a>
-                    <a class="contact-card" href="https://www.behance.net/smilinglion" target="_blank" rel="noopener">
-                        <span class="contact-card__label">Behance</span>
-                        <span class="contact-card__value">behance.net/smilinglion</span>
-                    </a>
+        </section>
+        <!-- 1. Графический дизайн -->
+        <section class="section section--flush" id="s-graph">
+            <div class="container">
+                <div class="fade-in">
+                    <h3 class="subsection-title">Графический дизайн</h3>
+                    <p class="subsection-desc">Уверенно применяю принципы колористики, композиции и типографики. Владею
+                        техдизайном, мэтпейнтингом, фотобашингом и профессиональной ретушью. Рисую от руки
+                        для набросков
+                        концепций и внедряю нейросети для получения более интересных результатов в короткие
+                        сроки.</p>
                 </div>
-                <div class="contacts__group contacts__group--direct">
-                    <a class="contact-card" href="https://www.linkedin.com/in/brandloga/" target="_blank"
-                        rel="noopener">
-                        <span class="contact-card__label">LinkedIn</span>
-                        <span class="contact-card__value">linkedin.com/in/brandloga</span>
-                    </a>
-                    <a class="contact-card" href="https://t.me/smiling_lion" target="_blank" rel="noopener">
-                        <span class="contact-card__label">Телеграм</span>
-                        <span class="contact-card__value">@smiling_lion</span>
-                    </a>
-                    <a class="contact-card" href="tel:+79198127255">
-                        <span class="contact-card__label">Телефон</span>
-                        <span class="contact-card__value">+7&nbsp;919&nbsp;812&nbsp;72&nbsp;55</span>
-                    </a>
-                    <a class="contact-card" href="mailto:sorokin_ea@inbox.ru">
-                        <span class="contact-card__label">Эл. почта</span>
-                        <span class="contact-card__value">sorokin_ea@inbox.ru</span>
-                    </a>
+                <div class="gallery gallery--graph fade-in">
+                    <div class="media"><img alt="Графический дизайн 1" src="assets/04/04_01.jpg" /></div>
+                    <div class="media"><img alt="Графический дизайн 2" src="assets/04/04_02.jpg" /></div>
+                    <div class="media"><img alt="Графический дизайн 3" src="assets/04/04_03.jpg" /></div>
+                    <div class="media"><img alt="Графический дизайн 4" src="assets/04/04_04.jpg" /></div>
+                    <div class="media media--wide-2"><img alt="Графический дизайн 6" src="assets/04/04_06.jpg" /></div>
+                    <div class="media media--wide"><img alt="Графический дизайн 5" src="assets/04/04_05.jpg" /></div>
                 </div>
-                <div style="text-align: center; margin-top: 20px;">
-                    <a class="contacts__pdf-link" href="assets/resume_pdf/egor_sorokin_cv-260505.pdf" download><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 1.5A1.5 1.5 0 0 1 3.5 0H9l4 4v10.5A1.5 1.5 0 0 1 11.5 16h-8A1.5 1.5 0 0 1 2 14.5v-13Z" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1.2"/><path d="M9 0v3.5A.5.5 0 0 0 9.5 4H13" stroke="currentColor" stroke-width="1.2"/><path d="M5 10l2 2 2-2M7 7v5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Скачать PDF-версию резюме (443&nbsp;кб)</a>
+                <div class="subblock fade-in">
+                    <h4 class="subblock-title">Использование нейросетей</h4>
+                    <p class="subblock-desc">Активно применяю все сильные стороны ИИ для генерации визуалов
+                        (Midjourney, Nanobanana, Firefly, Kling), работы с материалом (ChatGPT, Gemini)
+                        и автоматизации (разработка ИИ-агентов и вайб-кодинг на Codex, Gemini
+                        и Claude).</p>
+                    <div class="gallery gallery--ai">
+                        <div class="media"><img alt="AI-инструменты 1" src="assets/10/10_01.jpg" /></div>
+                        <div class="media"><img alt="AI-инструменты 2" src="assets/10/10_02.jpg" /></div>
+                        <div class="media"><img alt="AI-инструменты 3" src="assets/10/10_03.jpg" /></div>
+                        <div class="media"><img alt="AI-инструменты 4" src="assets/10/10_04.jpeg" /></div>
+                        <div class="media"><img alt="AI-инструменты 5" src="assets/10/10_05.jpg" /></div>
+                        <div class="media"><img alt="AI-инструменты 6" src="assets/10/10_06.jpg" /></div>
+                    </div>
+                    <p class="gallery-caption">Продуктовые визуалы, собранные через AI-пайплайн: генерация базы
+                        в Midjourney и Nanobanana, ручная доработка в Photoshop. Заменяет полноценную
+                        фотосессию при правильно выстроенном процессе.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ================================================
+        </section>
+        <!-- 2. Брендинг -->
+        <section class="section section--flush" id="s-brand">
+            <div class="container">
+                <div class="fade-in">
+                    <h3 class="subsection-title">Брендинг</h3>
+                    <p class="subsection-desc">Люблю создавать интересную и насыщенную смыслом айдентику
+                        и бренд-системы.
+                        Масштабирую идею от логотипа до целостной системы: фирменный стиль, гайдлайны, брендбук.
+                    </p>
+                </div>
+                <div class="gallery gallery--2 fade-in">
+                    <a class="media"
+                        href="https://www.behance.net/gallery/224434865/A-logo-for-sauna-tents-manufacturer"
+                        rel="noopener" target="_blank">
+                        <img alt="Logo for sauna tents manufacturer" src="assets/05/05_01.jpg" />
+                    </a>
+                    <a class="media" href="https://www.behance.net/gallery/114406839/The-logo-for-the-barbershop"
+                        rel="noopener" target="_blank">
+                        <img alt="Logo for the barbershop" src="assets/05/05_02.jpg" />
+                    </a>
+                    <a class="media"
+                        href="https://www.behance.net/gallery/247688735/Branding-for-Interior-Designers-CRM"
+                        rel="noopener" target="_blank">
+                        <img alt="Branding for Interior Designers CRM" src="assets/05/05_03.jpg" />
+                    </a>
+                    <a class="media"
+                        href="https://www.behance.net/gallery/247591895/Brand-identity-for-a-wooden-toys-store"
+                        rel="noopener" target="_blank">
+                        <img alt="Brand identity for a wooden toys store" src="assets/05/05_04.jpg" />
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- 3. Презентации -->
+        <section class="section section--flush" id="s-pres">
+            <div class="container">
+                <div class="fade-in">
+                    <h3 class="subsection-title">Презентации 40+ страниц</h3>
+                    <p class="subsection-desc">Основной инструмент — Figma, базовая и Figma Presentation. Активно
+                        изучаю возможности нейросетей для ускорения и оптимизации разработки слайдов.</p>
+                </div>
+                <div class="gallery gallery--3 fade-in">
+                    <div class="media"><img alt="Презентация 1" src="assets/03/03_01.jpg" /></div>
+                    <div class="media"><img alt="Презентация 2" src="assets/03/03_02.jpg" /></div>
+                    <div class="media"><img alt="Презентация 3" src="assets/03/03_03.jpg" /></div>
+                    <div class="media"><img alt="Презентация 4" src="assets/03/03_04.jpg" /></div>
+                    <div class="media"><img alt="Презентация 5" src="assets/03/03_05.jpg" /></div>
+                    <div class="media"><img alt="Презентация 6" src="assets/03/03_06.jpg" /></div>
+                    <div class="media"><img alt="Презентация 7" src="assets/03/03_07.jpg" /></div>
+                    <div class="media"><img alt="Презентация 8" src="assets/03/03_08.jpg" /></div>
+                    <div class="media"><img alt="Презентация 9" src="assets/03/03_09.jpg" /></div>
+                </div>
+            </div>
+        </section>
+        <!-- 4. Веб-дизайн -->
+        <section class="section section--flush" id="s-web">
+            <div class="container">
+                <div class="fade-in">
+                    <h3 class="subsection-title">Веб-дизайн</h3>
+                    <p class="subsection-desc">Понимаю принципы UX/UI, выстраиваю маршрут пользователя. Строю
+                        дизайн-системы, имею опыт сборки сайтов «под ключ» (HTML/CSS/JS + СMS Wordpress/Joomla/Drupal).
+                    </p>
+                </div>
+                <div class="web-project fade-in">
+                    <h4 class="web-project__title">Дизайн сайта производителя отделочных материалов</h4>
+                    <a class="web-project__url" href="http://ortograf.ru" rel="noopener" target="_blank">ortograf.ru</a>
+                    <p class="web-project__desc">Проектирование и дизайн сложного интернет-магазина. Ключевая
+                        особенность — удобный онлайн-конструктор, в котором пользователь последовательно собирает
+                        уникальный дизайн: выбирает изображение, текстуру, делает цветокоррекцию, примеряет
+                        в интерьере и сразу получает стоимость.</p>
+                    <a class="media web-project__media"
+                        href="https://brandloga.ru/dizajn-sajta-proizvoditelya-otdelochnyh-materialov-ortograf/"
+                        rel="noopener" target="_blank">
+                        <img alt="Сайт производителя отделочных материалов «Ортограф»" src="assets/07/07_01.jpg" />
+                    </a>
+                    <a class="web-project__case"
+                        href="https://brandloga.ru/dizajn-sajta-proizvoditelya-otdelochnyh-materialov-ortograf/"
+                        rel="noopener" target="_blank">Полный кейс</a>
+                </div>
+                <div class="web-project fade-in">
+                    <h4 class="web-project__title">Сайт для центра обучения</h4>
+                    <a class="web-project__url" href="http://psyprofess.ru" rel="noopener"
+                        target="_blank">psyprofess.ru</a>
+                    <p class="web-project__desc">Ключевые особенности: проведена работа по систематизации разнообразных
+                        типов курсов и обучающих материалов. На основе созданной структуры сформированы типовые блоки
+                        для каждого типа материала, спроектирован календарь событий, настроено удобное наполнение
+                        материала
+                        из админпанели.</p>
+                    <a class="media web-project__media"
+                        href="https://brandloga.ru/razrabotka-sajta-dlya-mezhdunarodnogo-czentra-professional/"
+                        rel="noopener" target="_blank">
+                        <img alt="Сайт для международного центра профессионального обучения"
+                            src="assets/07/07_02.jpg" />
+                    </a>
+                    <a class="web-project__case"
+                        href="https://brandloga.ru/razrabotka-sajta-dlya-mezhdunarodnogo-czentra-professional/"
+                        rel="noopener" target="_blank">Полный кейс</a>
+                </div>
+                <div class="web-project fade-in">
+                    <h4 class="web-project__title">Сайт для интернет-магазина шин</h4>
+                    <a class="web-project__url" href="https://altraauto.kz" rel="noopener"
+                        target="_blank">altraauto.kz</a>
+                    <p class="web-project__desc">Ключевые особенности: помимо детального дизайна всех страниц
+                        интернет-магазина, спроектирован полностью сложный и многокомпонентный личный кабинет, внутри
+                        которого и функционал для поставщиков (учтена логистика товаров, наполнение карточек),
+                        и покупателей.</p>
+                    <a class="media web-project__media"
+                        href="https://www.behance.net/gallery/83594697/Website-for-tyre-online-shop" rel="noopener"
+                        target="_blank">
+                        <img alt="Сайт интернет-магазина шин" src="assets/07/07_03.jpg" />
+                    </a>
+                    <a class="web-project__case"
+                        href="https://www.behance.net/gallery/83594697/Website-for-tyre-online-shop" rel="noopener"
+                        target="_blank">Полный кейс</a>
+                </div>
+            </div>
+        </section>
+        <!-- 5. Упаковка -->
+        <section class="section section--flush" id="s-pack">
+            <div class="container">
+                <div class="fade-in">
+                    <h3 class="subsection-title">Упаковка</h3>
+                    <p class="subsection-desc">Готовлю макеты под печать различной сложности: от буклетов
+                        до многостраничной
+                        продукции и упаковки. Разбираюсь в допечатной подготовке, разработал набор скриптов,
+                        которые
+                        позволяют ускорить подготовку макетов.</p>
+                </div>
+                <div class="gallery gallery--print fade-in">
+                    <div class="media"><img alt="Упаковка 1" src="assets/02a/02a_01.jpg" /></div>
+                    <div class="media"><img alt="Упаковка 2" src="assets/02a/02a_02.jpg" /></div>
+                    <div class="media media--full"><img alt="Упаковка 3" src="assets/02a/02a_03.jpg" /></div>
+                    <div class="media"><img alt="Упаковка 4" src="assets/02a/02a_04.jpg" /></div>
+                    <div class="media"><img alt="Упаковка 5" src="assets/02a/02a_05.jpg" /></div>
+                </div>
+            </div>
+        </section>
+        <!-- 6. Оформление пространства -->
+        <section class="section section--flush" id="s-spatial">
+            <div class="container">
+                <div class="fade-in">
+                    <h3 class="subsection-title">Оформление пространства</h3>
+                    <p class="subsection-desc">Совмещаю дизайнерское мышление с 3D-визуализацией
+                        и AI-генерацией — это даёт возможность показать клиенту убедительную концепцию
+                        пространства ещё на этапе обсуждения, без дорогостоящих рендеров.</p>
+                </div>
+                <div class="gallery gallery--2 fade-in">
+                    <div class="media"><img alt="Оформление пространства 1" src="assets/02b/02b_01.jpg" /></div>
+                    <div class="media"><img alt="Оформление пространства 2" src="assets/02b/02b_02.jpg" /></div>
+                    <div class="media"><img alt="Оформление пространства 3" src="assets/02b/02b_03.jpg" /></div>
+                    <div class="media"><img alt="Оформление пространства 4" src="assets/02b/02b_04.jpg" /></div>
+                </div>
+            </div>
+        </section>
+        <!-- 7. 3D и моушн-дизайн -->
+        <section class="section section--flush" id="s-3d">
+            <div class="container">
+                <div class="fade-in">
+                    <h3 class="subsection-title">3D и моушн-дизайн</h3>
+                    <p class="subsection-desc">Cinema 4D, Blender — для статичных сцен и продуктовых
+                        визуалов. After Effects — для несложных моушн-роликов и анимации элементов.
+                        Использую преимущественно как дополнение к основным направлениям, а не как
+                        самостоятельную специализацию.</p>
+                </div>
+                <div class="gallery gallery--3d fade-in">
+                    <div class="media media--wide"><img alt="3D работа 1" src="assets/06/06_01.jpg" /></div>
+                    <div class="media"><img alt="3D работа 2" src="assets/06/06_02.jpg" /></div>
+                    <div class="media"><img alt="3D работа 3" src="assets/06/06_03.jpg" /></div>
+                    <div class="media"><img alt="3D работа 4" src="assets/06/06_04.jpg" /></div>
+                </div>
+            </div>
+        </section>
+        <!-- SCREEN — Опыт работы -->
+        <section class="section" id="s-exp">
+            <div class="container fade-in">
+                <h2 class="t-section">Опыт работы</h2>
+            </div>
+            <div class="container exp-list">
+                <article aria-current="true" class="exp-entry fade-in" itemscope=""
+                    itemtype="https://schema.org/OrganizationRole">
+                    <div class="exp-date"><time datetime="2024-08" itemprop="startDate">Август 2024</time> — <time
+                            datetime="2026-04" itemprop="endDate">Апрель 2026</time></div>
+                    <div class="exp-body">
+                        <h3 class="exp-company" itemprop="worksFor">Simushka</h3>
+                        <p class="exp-meta">Россия · <a href="https://simushka.ru" rel="noopener"
+                                target="_blank">simushka.ru</a></p>
+                        <p class="exp-role" itemprop="roleName">Старший дизайнер</p>
+                        <div class="exp-desc">
+                            <p>Отвечал за графическое производство в команде бренд-дизайна: баннеры,
+                                презентации, промо-материалы для мероприятий и кампаний, упаковка
+                                и полиграфия. Параллельно выстраивал процессы, которые сделали эту работу быстрее
+                                и надёжнее.</p>
+                            <ol>
+                                <li>Перевёл производство в Figma и организовал систему проектов — команда
+                                    перестала тратить время на поиск актуальных исходников.</li>
+                                <li>Внедрил AI-генерацию продуктовых визуалов — закрыл потребность
+                                    в дорогостоящих фотосессиях, сохранив профессиональное качество.</li>
+                                <li>Выстроил процесс презентаций в Figma: скорость сборки выросла
+                                    в 5 раз —
+                                    больше времени на качество, меньше на борьбу с инструментом.</li>
+                                <li>Разработал систему шаблонов для торговых представителей
+                                    в 12 регионах —
+                                    менеджеры самостоятельно обновляют даты и адреса, не затрагивая дизайн.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+                <article class="exp-entry fade-in" itemscope="" itemtype="https://schema.org/OrganizationRole">
+                    <div class="exp-date"><time datetime="2018-03" itemprop="startDate">Март 2018</time> — <time
+                            datetime="2024-06" itemprop="endDate">Июнь 2024</time></div>
+                    <div class="exp-body">
+                        <h3 class="exp-company" itemprop="worksFor">Acronis</h3>
+                        <p class="exp-meta">Швейцария · <a href="https://acronis.com" rel="noopener"
+                                target="_blank">acronis.com</a></p>
+                        <p class="exp-role" itemprop="roleName">Старший дизайнер / Арт-директор</p>
+                        <div class="exp-desc">
+                            <p>Шесть лет в международной B2B tech-компании. Работал в команде веб-дизайна:
+                                визуальные кампании, баннерные экосистемы, презентации, key visual
+                                для продуктовых запусков. Участвовал в разработке концепций и фирменного
+                                стиля для глобальных маркетинговых кампаний.</p>
+                            <ol>
+                                <li>Разрабатывал визуальные кампании и промо-материалы для 50+ международных
+                                    мероприятий и рекламных кампаний.</li>
+                                <li>Создал масштабируемую систему компонентов для баннерных кампаний — один
+                                    набор исходников разворачивался на 15+ форматов без ручной
+                                    перевёрстки.</li>
+                                <li>Внедрил AI и 3D-графику в процесс создания иллюстраций — сократил
+                                    время производства сложных визуалов в несколько раз.</li>
+                                <li>Написал скрипты для Figma и Photoshop, автоматизировавшие рутинные
+                                    операции — освободил время команды для задач, требующих реального
+                                    дизайнерского мышления.</li>
+                                <li>Курировал работу миддл-дизайнеров: ставил задачи, ревизировал макеты,
+                                    повышал общий уровень команды.</li>
+                                <li>Выстроил систему постановки задач в Jira, обучил менеджеров — снизил
+                                    количество итераций из-за недопонимания ТЗ.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+                <article class="exp-entry fade-in" itemscope="" itemtype="https://schema.org/OrganizationRole">
+                    <div class="exp-date"><time datetime="2016-05" itemprop="startDate">Май 2016</time> — <time
+                            datetime="2023-08" itemprop="endDate">Август 2023</time></div>
+                    <div class="exp-body">
+                        <h3 class="exp-company" itemprop="worksFor">Plusmedia (Лидер поиска)</h3>
+                        <p class="exp-meta">Самара · <a href="https://plusmedia.ru" rel="noopener"
+                                target="_blank">plusmedia.ru</a> · <a href="https://liderpoiska.ru" rel="noopener"
+                                target="_blank">liderpoiska.ru</a></p>
+                        <p class="exp-role" itemprop="roleName">Ведущий дизайнер</p>
+                        <div class="exp-desc">
+                            <p>Вёл дизайн-проекты полного цикла в SEO- и веб-дизайнерском подразделении
+                                компании: от анализа ТЗ и обсуждения с клиентом до финальных
+                                макетов и контроля вёрстки.</p>
+                            <ol>
+                                <li>Самостоятельно управлял проектами — от брифа до сдачи,
+                                    без промежуточного менеджера между мной и заказчиком.</li>
+                                <li>Разработал руководство по дизайну для студии — стандартизировал
+                                    процессы и поднял уровень работ младших дизайнеров.</li>
+                                <li>Работал с контентом без копирайтера: анализировал материал клиента,
+                                    переписывал и структурировал тексты под дизайн.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+                <article class="exp-entry fade-in" itemscope="" itemtype="https://schema.org/OrganizationRole">
+                    <div class="exp-date"><time datetime="2008-01" itemprop="startDate">2008</time> — <time
+                            datetime="present" itemprop="endDate">настоящее время</time></div>
+                    <div class="exp-body">
+                        <h3 class="exp-company" itemprop="worksFor">Фриланс</h3>
+                        <p class="exp-meta">Самостоятельная практика · брендинг, веб-дизайн, полиграфия</p>
+                        <p class="exp-role" itemprop="roleName">Дизайнер · Арт-директор (параллельно с основной
+                            работой)</p>
+                        <div class="exp-desc">
+                            <p>Веду проекты от начала до конца: брифование, проектирование, дизайн,
+                                поддержка визуального стиля бренда, дизайн-системы и продуктовый дизайн.</p>
+                            <ul>
+                                <li>Самостоятельно закрываю задачи менеджера, копирайтера
+                                    и дизайнера — работаю напрямую с заказчиком
+                                    без промежуточного звена.</li>
+                                <li>Пишу ТЗ и контролирую работу верстальщика
+                                    и программиста.</li>
+                                <li>Сопровождаю проект до продакшена: от первого брифа до финального
+                                    запуска и дальнейшей поддержки визуального стиля.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- SCREEN — Используемые инструменты (с подразделом «Нейросети») -->
+        <section class="section" id="s10">
+            <div class="container">
+                <div class="fade-in">
+                    <h2 class="t-section">Используемые инструменты</h2>
+                    <div class="tools-grid" style="margin-bottom: 48px;">
+                        <div>
+                            <p class="tools-grid__cell-title">Дизайн</p>
+                            <p class="tools-grid__cell-body">Figma (с первой версии, пишу скрипты) · Adobe Photoshop,
+                                Illustrator, InDesign · After Effects</p>
+                        </div>
+                        <div>
+                            <p class="tools-grid__cell-title">3D и визуализация</p>
+                            <p class="tools-grid__cell-body">Blender · Cinema 4D (Octane, Arnold) ·
+                                Unreal Engine (базово)</p>
+                        </div>
+                        <div>
+                            <p class="tools-grid__cell-title">Автоматизация</p>
+                            <p class="tools-grid__cell-body">Figma-скрипты · Photoshop Actions &amp; Scripts ·
+                                HTML/CSS/JS
+                                (вёрстка под задачи)</p>
+                        </div>
+                        <div>
+                            <p class="tools-grid__cell-title">AI-инструменты</p>
+                            <p class="tools-grid__cell-body">Midjourney, Nanobanana, Firefly, Kling — генерация
+                                визуалов · ChatGPT, Claude, Gemini — работа с материалом · Codex —
+                                автоматизация</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SCREEN — Основные навыки -->
+        <section class="section" id="s11">
+            <div class="container fade-in">
+                <h2 class="t-section">Как я работаю</h2>
+            </div>
+            <div class="container" style="padding-top: 32px;">
+                <!-- Block 1 — Специализация -->
+                <div class="eff-block fade-in">
+                    <div class="eff-block__header">
+                        <div class="eff-block__number">01</div>
+                        <h4 class="eff-block__title">Специализация на системных задачах</h4>
+                    </div>
+                    <p class="eff-block__desc">Направления, где важна не только визуальная идея, но и логика,
+                        архитектура и воспроизводимость результата.</p>
+                    <ul class="eff-cards">
+                        <li>
+                            <strong>Сложные презентации (40+ слайдов)</strong>
+                            Работа с большими массивами данных, где важна архитектура макета и системная
+                            логика. Умею выстраивать визуальный нарратив, а не просто оформлять слайды.
+                        </li>
+                        <li>
+                            <strong>Допечатная подготовка и полиграфия</strong>
+                            Полный цикл от макета до производства. Знаю, где возникает брак, как его
+                            предотвратить и как сократить время на согласование с типографией.
+                        </li>
+                        <li>
+                            <strong>Дизайн-системы и инструменты для команды</strong>
+                            Разработка компонентных библиотек, шаблонных систем и скриптов, которыми пользуется
+                            весь дизайн-отдел и смежные подразделения — маркетинг, продажи.
+                        </li>
+                        <li>
+                            <strong>Брендинг и визуальные кампании</strong>
+                            Участие в концептуальных штурмах, разработка визуального языка бренда и его
+                            последовательное применение во всех каналах коммуникации.
+                        </li>
+                    </ul>
+                </div>
+                <!-- Block 2 — Профессиональные качества -->
+                <div class="eff-block fade-in">
+                    <div class="eff-block__header">
+                        <div class="eff-block__number">02</div>
+                        <h4 class="eff-block__title">Управление и коммуникация</h4>
+                    </div>
+                    <h5 class="eff-block__subtitle">Хард-скиллы</h5>
+                    <ol class="eff-list">
+                        <li>
+                            <span class="eff-list__num">01</span>
+                            <span>Имею опыт управления командой до 5 человек в качестве арт-директора
+                                и координатора
+                                проектов, грамотно составляю ТЗ и контролирую работу команды.</span>
+                        </li>
+                        <li>
+                            <span class="eff-list__num">02</span>
+                            <span>Лично презентую и защищаю работы перед клиентами и стейкхолдерами —
+                                без промежуточного менеджера.</span>
+                        </li>
+                        <li>
+                            <span class="eff-list__num">03</span>
+                            <span>Активно веду профессиональный блог, создаю скрипты для программ, облегчающие
+                                и ускоряющие
+                                работу, делюсь знаниями с коллегами.</span>
+                        </li>
+                        <li>
+                            <span class="eff-list__num">04</span>
+                            <span>Слежу за тенденциями в мире дизайна, активно развиваюсь и пробую новые
+                                области, непрерывно
+                                вкладываюсь в своё обучение.</span>
+                        </li>
+                    </ol>
+                    <h5 class="eff-block__subtitle">Софт-скиллы</h5>
+                    <ol class="eff-list">
+                        <li>
+                            <span class="eff-list__num">05</span>
+                            <span>Системный подход: разбиваю задачу на этапы, выстраиваю процесс, фиксирую
+                                промежуточные результаты. Самостоятельно планирую своё время и ресурсы, чётко оцениваю
+                                объём
+                                и сроки работ, заранее предупреждаю о возможных проблемах.</span>
+                        </li>
+                        <li>
+                            <span class="eff-list__num">06</span>
+                            <span>Уверенно чувствую себя как в офисе, так и на полной удалёнке. Легко
+                                нахожу общий язык с командой.</span>
+                        </li>
+                    </ol>
+                    <h5 class="eff-block__subtitle">Передача знаний</h5>
+                    <ol class="eff-list">
+                        <li>
+                            <span class="eff-list__num">07</span>
+                            <span>Личные изыскания и наработки регулярно переношу в отдел, проводя воркшопы
+                                и мастер-классы
+                                внутри отдела, консультирую менеджеров смежных отделов. Отдел дизайна и компания
+                                получают
+                                знания о передовых технологиях, внедряя их в работу.</span>
+                        </li>
+                    </ol>
+                    <h5 class="eff-block__subtitle">Редактура</h5>
+                    <ol class="eff-list">
+                        <li>
+                            <span class="eff-list__num">08</span>
+                            <span>Русский язык люблю, пишу грамотно. Прошёл обучение редактуры на курсе Максима
+                                Ильяхова
+                                «Пиши, сокращай», понимаю и применяю принципы информационного стиля.</span>
+                        </li>
+                        <li>
+                            <span class="eff-list__num">09</span>
+                            <span>Без копирайтера структурирую материал клиента: вычленяю смысловые блоки,
+                                переписываю и внедряю в дизайн.</span>
+                        </li>
+                    </ol>
+                    <h5 class="eff-block__subtitle">Языки</h5>
+                    <ol class="eff-list">
+                        <li>
+                            <span class="eff-list__num">11</span>
+                            <span>Английский — B2 (читаю документацию, веду переписку, участвую в обсуждениях
+                                международных команд).</span>
+                        </li>
+                        <li>
+                            <span class="eff-list__num">12</span>
+                            <span>Немецкий — A2.</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <!-- SCREEN — Открыт к позициям -->
+        <section class="section" id="s-open">
+            <div class="container fade-in">
+                <h2 class="t-section">Открыт к позициям</h2>
+                <p class="t-sub">Рассматриваю предложения в российских и международных командах — офис,
+                    гибрид или удалённо.</p>
+                <div class="position-chips">
+                    <span class="position-chip">Ведущий дизайнер / Senior Designer</span>
+                    <span class="position-chip">Арт-директор</span>
+                    <span class="position-chip">Дизайн-лид в продуктовой команде</span>
+                    <span class="position-chip">Дизайн-лид в маркетинге</span>
+                </div>
+            </div>
+        </section>
+        <!-- SCREEN — Контакты (финальный экран) -->
+        <section class="section" id="s-contacts">
+            <div class="container fade-in">
+                <div class="contacts contacts--centered" style="margin-top: 0;">
+                    <h2 class="t-section" style="text-align: center; margin-bottom: 32px;">Контакты</h2>
+                    <div class="contacts__group contacts__group--portfolio">
+                        <a class="contact-card" href="https://brandloga.ru" rel="noopener" target="_blank">
+                            <span class="contact-card__label">Сайт-портфолио</span>
+                            <span class="contact-card__value">brandloga.ru</span>
+                        </a>
+                        <a class="contact-card" href="https://www.behance.net/smilinglion" rel="noopener"
+                            target="_blank">
+                            <span class="contact-card__label">Behance</span>
+                            <span class="contact-card__value">behance.net/smilinglion</span>
+                        </a>
+                    </div>
+                    <div class="contacts__group contacts__group--direct">
+                        <a class="contact-card" href="https://www.linkedin.com/in/brandloga/" rel="noopener"
+                            target="_blank">
+                            <span class="contact-card__label">LinkedIn</span>
+                            <span class="contact-card__value">linkedin.com/in/brandloga</span>
+                        </a>
+                        <a class="contact-card" href="https://t.me/smiling_lion" rel="noopener" target="_blank">
+                            <span class="contact-card__label">Телеграм</span>
+                            <span class="contact-card__value">@smiling_lion</span>
+                        </a>
+                        <a class="contact-card" href="tel:+79198127255">
+                            <span class="contact-card__label">Телефон</span>
+                            <span class="contact-card__value">+7 919 812 72 55</span>
+                        </a>
+                        <a class="contact-card" href="mailto:sorokin_ea@inbox.ru">
+                            <span class="contact-card__label">Эл. почта</span>
+                            <span class="contact-card__value">sorokin_ea@inbox.ru</span>
+                        </a>
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a class="contacts__pdf-link" download=""
+                            href="assets/resume_pdf/egor_sorokin_cv-2026.pdf"><svg fill="none" height="16"
+                                viewbox="0 0 14 16" width="14" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2 1.5A1.5 1.5 0 0 1 3.5 0H9l4 4v10.5A1.5 1.5 0 0 1 11.5 16h-8A1.5 1.5 0 0 1 2 14.5v-13Z"
+                                    fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1.2">
+                                </path>
+                                <path d="M9 0v3.5A.5.5 0 0 0 9.5 4H13" stroke="currentColor" stroke-width="1.2"></path>
+                                <path d="M5 10l2 2 2-2M7 7v5" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="1.2"></path>
+                            </svg>Скачать PDF-версию резюме (443 кб)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================================================
          SCROLL ANIMATIONS
          ================================================ -->
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-        // Active nav dot + topnav link
-        const sections = document.querySelectorAll('section[id]');
-        const dots = document.querySelectorAll('.nav-dots a');
-        const topLinks = document.querySelectorAll('.topnav__links a');
-
-        // Map each section to its parent topnav group
-        const topGroups = ['s-graph', 's-brand', 's-pres', 's-web', 's-pack', 's-spatial', 's-3d'];
-        function topAnchorFor(id) {
-            if (topGroups.includes(id)) return '#s-graph';
-            if (id === 's-exp') return '#s-exp';
-            if (id === 's10' || id === 's11') return '#s11';
-            if (id === 's-open') return '#s-open';
-            if (id === 's-contacts') return '#s-contacts';
-            return null;
-        }
-
-        const navObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    dots.forEach(d => d.classList.remove('active'));
-                    const dot = document.querySelector(`.nav-dots a[href="#${entry.target.id}"]`);
-                    if (dot) dot.classList.add('active');
-
-                    const topHref = topAnchorFor(entry.target.id);
-                    if (topHref) {
-                        topLinks.forEach(l => l.classList.remove('active'));
-                        const link = document.querySelector(`.topnav__links a[href="${topHref}"]`);
-                        if (link) link.classList.add('active');
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
                     }
-                }
-            });
-        }, { threshold: 0.3 });
+                });
+            }, { threshold: 0.1 });
 
-        sections.forEach(s => navObserver.observe(s));
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Show topnav after scrolling past hero
-        const topnav = document.getElementById('topnav');
-        const hero = document.getElementById('hero');
-        const heroObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                topnav.classList.toggle('visible', !entry.isIntersecting);
-            });
-        }, { threshold: 0.15 });
-        if (hero) heroObserver.observe(hero);
+            // Active nav dot + topnav link
+            const sections = document.querySelectorAll('section[id]');
+            const dots = document.querySelectorAll('.nav-dots a');
+            const topLinks = document.querySelectorAll('.topnav__links a');
 
-        // Lightbox
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = lightbox.querySelector('img');
-        const lightboxClose = lightbox.querySelector('.lightbox__close');
-        const lightboxPrev = lightbox.querySelector('.lightbox__arrow--prev');
-        const lightboxNext = lightbox.querySelector('.lightbox__arrow--next');
-        const lightboxCounter = lightbox.querySelector('.lightbox__counter');
-
-        // Lightbox navigation is scoped to the current gallery (section)
-        let lbImages = [];
-        let lbIndex = 0;
-
-        function updateLightbox() {
-            const img = lbImages[lbIndex];
-            lightboxImg.src = img.currentSrc || img.src;
-            lightboxImg.alt = img.alt || '';
-            lightboxPrev.disabled = lbIndex === 0;
-            lightboxNext.disabled = lbIndex === lbImages.length - 1;
-            const total = lbImages.length;
-            lightboxCounter.textContent = total > 1 ? `${lbIndex + 1} / ${total}` : '';
-            lightboxPrev.style.display = total > 1 ? '' : 'none';
-            lightboxNext.style.display = total > 1 ? '' : 'none';
-        }
-
-        function openLightboxFromImage(img) {
-            // Scope to the closest gallery (or fall back to section)
-            const scope = img.closest('.gallery') || img.closest('section') || document;
-            lbImages = Array.from(scope.querySelectorAll('.media img'))
-                .filter(i => !i.closest('a'));
-            lbIndex = lbImages.indexOf(img);
-            if (lbIndex < 0) {
-                lbImages = [img];
-                lbIndex = 0;
+            // Map each section to its parent topnav group
+            const topGroups = ['s-graph', 's-brand', 's-pres', 's-web', 's-pack', 's-spatial', 's-3d'];
+            function topAnchorFor(id) {
+                if (topGroups.includes(id)) return '#s-graph';
+                if (id === 's-exp') return '#s-exp';
+                if (id === 's10' || id === 's11') return '#s11';
+                if (id === 's-open') return '#s-open';
+                if (id === 's-contacts') return '#s-contacts';
+                return null;
             }
-            updateLightbox();
-            lightbox.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
 
-        function closeLightbox() {
-            lightbox.classList.remove('open');
-            document.body.style.overflow = '';
-            setTimeout(() => { lightboxImg.src = ''; }, 300);
-        }
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        dots.forEach(d => d.classList.remove('active'));
+                        const dot = document.querySelector(`.nav-dots a[href="#${entry.target.id}"]`);
+                        if (dot) dot.classList.add('active');
 
-        function showPrev() {
-            if (lbIndex > 0) { lbIndex--; updateLightbox(); }
-        }
-        function showNext() {
-            if (lbIndex < lbImages.length - 1) { lbIndex++; updateLightbox(); }
-        }
+                        const topHref = topAnchorFor(entry.target.id);
+                        if (topHref) {
+                            topLinks.forEach(l => l.classList.remove('active'));
+                            const link = document.querySelector(`.topnav__links a[href="${topHref}"]`);
+                            if (link) link.classList.add('active');
+                        }
+                    }
+                });
+            }, { threshold: 0.3 });
 
-        // Bind click on images
-        document.querySelectorAll('.media img').forEach(img => {
-            if (img.closest('a')) return;
-            img.addEventListener('click', () => openLightboxFromImage(img));
-        });
+            sections.forEach(s => navObserver.observe(s));
 
-        lightboxPrev.addEventListener('click', showPrev);
-        lightboxNext.addEventListener('click', showNext);
-        lightboxClose.addEventListener('click', closeLightbox);
+            // Show topnav after scrolling past hero
+            const topnav = document.getElementById('topnav');
+            const hero = document.getElementById('hero');
+            const heroObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    topnav.classList.toggle('visible', !entry.isIntersecting);
+                });
+            }, { threshold: 0.15 });
+            if (hero) heroObserver.observe(hero);
 
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
-        });
+            // Lightbox
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = lightbox.querySelector('img');
+            const lightboxClose = lightbox.querySelector('.lightbox__close');
+            const lightboxPrev = lightbox.querySelector('.lightbox__arrow--prev');
+            const lightboxNext = lightbox.querySelector('.lightbox__arrow--next');
+            const lightboxCounter = lightbox.querySelector('.lightbox__counter');
 
-        document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('open')) return;
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowLeft') showPrev();
-            if (e.key === 'ArrowRight') showNext();
-        });
+            // Lightbox navigation is scoped to the current gallery (section)
+            let lbImages = [];
+            let lbIndex = 0;
 
-        // Touch/swipe support
-        let lbTouchX = null;
-        lightbox.addEventListener('touchstart', (e) => {
-            lbTouchX = e.touches[0].clientX;
-        }, { passive: true });
-        lightbox.addEventListener('touchend', (e) => {
-            if (lbTouchX === null) return;
-            const dx = e.changedTouches[0].clientX - lbTouchX;
-            if (Math.abs(dx) > 50) dx < 0 ? showNext() : showPrev();
-            lbTouchX = null;
-        }, { passive: true });
-    </script>
+            function updateLightbox() {
+                const img = lbImages[lbIndex];
+                lightboxImg.src = img.currentSrc || img.src;
+                lightboxImg.alt = img.alt || '';
+                lightboxPrev.disabled = lbIndex === 0;
+                lightboxNext.disabled = lbIndex === lbImages.length - 1;
+                const total = lbImages.length;
+                lightboxCounter.textContent = total > 1 ? `${lbIndex + 1} / ${total}` : '';
+                lightboxPrev.style.display = total > 1 ? '' : 'none';
+                lightboxNext.style.display = total > 1 ? '' : 'none';
+            }
 
+            function openLightboxFromImage(img) {
+                // Scope to the closest gallery (or fall back to section)
+                const scope = img.closest('.gallery') || img.closest('section') || document;
+                lbImages = Array.from(scope.querySelectorAll('.media img'))
+                    .filter(i => !i.closest('a'));
+                lbIndex = lbImages.indexOf(img);
+                if (lbIndex < 0) {
+                    lbImages = [img];
+                    lbIndex = 0;
+                }
+                updateLightbox();
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+                setTimeout(() => { lightboxImg.src = ''; }, 300);
+            }
+
+            function showPrev() {
+                if (lbIndex > 0) { lbIndex--; updateLightbox(); }
+            }
+            function showNext() {
+                if (lbIndex < lbImages.length - 1) { lbIndex++; updateLightbox(); }
+            }
+
+            // Bind click on images
+            document.querySelectorAll('.media img').forEach(img => {
+                if (img.closest('a')) return;
+                img.addEventListener('click', () => openLightboxFromImage(img));
+            });
+
+            lightboxPrev.addEventListener('click', showPrev);
+            lightboxNext.addEventListener('click', showNext);
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('open')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
+            });
+
+            // Touch/swipe support
+            let lbTouchX = null;
+            lightbox.addEventListener('touchstart', (e) => {
+                lbTouchX = e.touches[0].clientX;
+            }, { passive: true });
+            lightbox.addEventListener('touchend', (e) => {
+                if (lbTouchX === null) return;
+                const dx = e.changedTouches[0].clientX - lbTouchX;
+                if (Math.abs(dx) > 50) dx < 0 ? showNext() : showPrev();
+                lbTouchX = null;
+            }, { passive: true });
+        </script>
+    </main>
 </body>
 
 </html>
